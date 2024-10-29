@@ -62,7 +62,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-success">Button</a>
+          <a className="btn bg-slate-800 text-gray-100 hover:text-slate-900">
+            Login
+          </a>
         </div>
       </div>
     </div>
