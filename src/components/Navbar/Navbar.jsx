@@ -44,7 +44,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <NavLink to="/" className="btn btn-ghost md:text-4xl text-xl">
+          <NavLink to="/" className="btn btn-ghost md:text-4xl md:p-0 text-xl">
             CookBook
           </NavLink>
         </div>

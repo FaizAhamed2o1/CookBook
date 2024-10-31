@@ -1,8 +1,14 @@
 import PropTypes from "prop-types";
 import { FaStar, FaCommentAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Recipe = ({ recipe }) => {
-  const { name, image, rating, reviewCount } = recipe;
+  const { name, image, rating, reviewCount, id } = recipe;
+  const navigate = useNavigate();
+  const handleShowRecipeDetails = () => {
+    navigate(`/recipe/${id}`);
+  };
+
   return (
     <div className="md:p-8 rounded-3xl p-4 space-y-6 border">
       <img
@@ -31,7 +37,10 @@ const Recipe = ({ recipe }) => {
         </div>
       </div>
 
-      <button className="btn bg-slate-800 text-gray-50 text-xl">
+      <button
+        className="btn bg-slate-800 hover:bg-slate-600 text-gray-50 text-xl"
+        onClick={handleShowRecipeDetails}
+      >
         See recipe details
       </button>
     </div>

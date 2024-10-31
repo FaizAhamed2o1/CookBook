@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
 import Recipes from "./components/Recipes/Recipes.jsx";
 import ContactUs from "./components/ContactUs/ContactUs.jsx";
+import RecipeDetails from "./components/RecipeDetails/RecipeDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,12 @@ const router = createBrowserRouter([
       {
         path: "/contactUs",
         element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/recipe/:recipeId",
+        loader: ({ params }) =>
+          fetch(`https://dummyjson.com/recipes/${params.recipeId}`),
+        element: <RecipeDetails></RecipeDetails>,
       },
     ],
   },
