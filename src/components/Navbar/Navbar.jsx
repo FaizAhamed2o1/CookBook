@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="max-w-7xl mx-4 md:mx-auto">
+    <div className="max-w-7xl md:mx-auto md:mb-14 md:mt-7 mb-7 mx-4 mt-5">
       <div className="navbar bg-base-100 p-0">
         <div className="navbar-start">
           <div className="dropdown">
@@ -14,7 +14,7 @@ const Navbar = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="w-5 h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -44,12 +44,12 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <NavLink to="/" className="btn btn-ghost text-xl">
+          <NavLink to="/" className="btn btn-ghost md:text-4xl text-xl">
             CookBook
           </NavLink>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-3">
+        <div className="navbar-center lg:flex hidden">
+          <ul className="menu menu-horizontal gap-3 px-1 text-lg">
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
@@ -62,7 +62,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-slate-800 text-gray-100 hover:text-slate-900">
+          <a className="btn bg-slate-800 hover:text-slate-900 text-gray-100">
             Login
           </a>
         </div>

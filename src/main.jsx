@@ -13,6 +13,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/recipes",
+        loader: () => fetch("https://dummyjson.com/recipes"),
         element: <Recipes></Recipes>,
       },
       {
